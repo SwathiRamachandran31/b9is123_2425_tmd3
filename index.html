@@ -16,7 +16,18 @@
                         alert("Baggage exceeds the 15kg allowance!");
                     } 
                 }
-                let doIt=()=>alert("Not Implemented!");
+                //let doIt=()=>alert("Not Implemented!");
+                    let doIt=()=> {
+                        let sum = 0;
+                        for (let i = 0; i < 1000; i++) {
+                            if (i % 3 === 0 || i % 5 === 0) {
+                                sum += i;
+                            }
+                        }
+                        alert("The sum of all multiples of 3 or 5 below 1000 is: " + sum);
+                    }
+
+
         </script>
     </head>
     <body>
@@ -31,7 +42,7 @@
     <input type="text" id="in">
     <button onclick='c()'>Press Me</button>
     
-
+    <button onclick='doIt()'>Sum of 3,5 multiples</button>
 
     <p>Exercise 2:</p>
     <p>Create a page with a button</p>
