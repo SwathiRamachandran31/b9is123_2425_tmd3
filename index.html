@@ -26,7 +26,31 @@
                         }
                         alert("The sum of all multiples of 3 or 5 below 1000 is: " + sum);
                     }
+                    
 
+                    function findMultiplesSum(a, b, n) {
+                        let sum = 0;
+                        for (let i = 0; i < n; i++) {
+                            if (i % a === 0 || i % b === 0) {
+                            sum += i;
+                            }
+                        }
+                        return sum;
+                    }
+
+        function handleClick() {
+            let a = parseInt(document.getElementById("a").value);
+            let b = parseInt(document.getElementById("b").value);
+            let n = parseInt(document.getElementById("n").value);
+
+            if (isNaN(a) || isNaN(b) || isNaN(n)) {
+                alert("Please enter valid numbers for a, b, and n.");
+                return;
+            }
+
+            let result = findMultiplesSum(a, b, n);
+            alert("The sum of all multiples of " + a + " or " + b + " below " + n + " is: " + result);
+        }
 
         </script>
     </head>
@@ -43,6 +67,12 @@
     <button onclick='c()'>Press Me</button>
     
     <button onclick='doIt()'>Sum of 3,5 multiples</button>
+
+    <input type="number" id="a" min="0">
+    <input type="number" id="b" min="0">
+    <input type="number" id="c" min="0" placeholder="Enter the count">
+
+    <button onclick='handleClick()'>Press Me</button>
 
     <p>Exercise 2:</p>
     <p>Create a page with a button</p>
